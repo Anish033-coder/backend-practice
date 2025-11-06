@@ -9,12 +9,12 @@
   },
   "keywords": [
     "javascript",
-    
     "backend"
   ],
   "author": "Anish",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
   }
 }
