@@ -6,7 +6,22 @@ dotenv.config({
     path : './env'
 })
 
- connectDB();
+ connectDB()
+ .then( () => {
+    const port = process.env.PORT;
+
+    app.on("error", () => {
+     console.log("error : ",error);
+     throw error
+    })
+
+    app.listen(port || 8000, () => {
+        console.log(`surver is running at : ${port}`)
+    });
+ })
+ .catch((error) => {
+     console.log("MOONGOSE connection failed !!!", error);
+ })
 
 // ;(async () => {
 //     try{
